@@ -2,135 +2,169 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/catalog-style.css">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
-	<header>
+	<header class="main-header">
 		<a href="index.html">
 			<img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип">
 		</a>
-		<nav aria-label="навигация по сайту">
-			<ul>
+		<nav class="main-navigation" aria-label="навигация по сайту">
+			<ul class="site-navigation">
 				<li><a href="studio.html">Студия</a></li>
 				<li><a href="customers.html">Клиенты</a></li>
 				<li><a>Магазин</a></li>
 				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
 		</nav>
-		<a href="basket.html">Корзина</a>
-		<p>Магазин готовых шаблонов</p>
+		<a href="basket.html" class="basket">Корзина</a>
+		<p class="catalog-headline">Магазин готовых шаблонов</p>
 	</header>
     <main>
-    	<form action="https://echo.htmlacademy.ru" method="get">
-            <fieldset>
-                <legend>Стоимость:</legend>
-                <span style="background-color: lightgray;">
-                <input type="range" min="0" max="15000">
-                </span>
-                <label for="from"> 
-                от <input type="number" id="from" placeholder="0">
-                </label>
-                <label for="to"> 
-                до <input type="number" id="to" placeholder="15 000">
-                </label>
-            </fieldset>
-    	    <fieldset>
-                <legend>Сетка:</legend>
-                    <ul>
-                        <li>		               
-			                <input type="radio" id="adapt" name="net" value="Адаптивная">
-                            <label for="adapt">Адаптивная</label>
+        <div class="filter">
+    	    <form action="https://echo.htmlacademy.ru" method="get">
+                <fieldset>
+                    <legend>Стоимость:</legend>
+                    <span style="background-color: lightgray;">
+                    <input type="range" min="0" max="15000">
+                    </span>
+                    <label for="from"> 
+                    от <input type="number" id="from" placeholder="0">
+                    </label>
+                    <label for="to"> 
+                    до <input type="number" id="to" placeholder="15 000">
+                    </label>
+                </fieldset>
+    	        <fieldset>
+                    <legend>Сетка:</legend>
+                        <ul class="radio-list">
+                            <li>		               
+			                    <input type="radio" id="adapt" name="net" value="Адаптивная">
+                                <label for="adapt">Адаптивная</label>
+                            </li>
+                            <li>
+			                    <input type="radio" id="fixed" name="net" value="Фиксированная">
+                                <label for="fixed">Фиксированная</label>
+                            </li>
+                            <li>
+			                    <input type="radio" id="rubber" name="net" value="Резиновая">
+                                <label for="rubber">Резиновая</label>
+                            </li>
+                        </ul>
+                </fieldset>
+		        <fieldset>
+    	            <legend>Особенности:</legend> 
+    	                <ul class="check-list">
+                            <li>
+    		                <input type="checkbox" id="check-slider" name="slider">
+                            <label for="check-slider">Слайдер</label>
+                            </li>
+                            <li>
+       		                <input type="checkbox" id="check-advantages" name="advantages">
+                            <label for="check-advantages">Блок преимуществ</label>
                         </li>
                         <li>
-			                <input type="radio" id="fixed" name="net" value="Фиксированная">
-                            <label for="fixed">Фиксированная</label>
+        	               <input type="checkbox" id="check-news" name="news">
+                            <label for="check-news">Новости</label>
                         </li>
                         <li>
-			                <input type="radio" id="rubber" name="net" value="Резиновая">
-                            <label for="rubber">Резиновая</label>
+        	               <input type="checkbox" id="check-gallery" name="gallery"  disabled>
+                            <label for="check-gallery">Галерея</label>
+                        </li>
+                        <li>
+        	                <input type="checkbox" id="check-basket" name="basket">
+                            <label for="check-basket">Корзина</label>
                         </li>
                     </ul>
-            </fieldset>
-		    <fieldset>
-    	        <legend>Особенности:</legend> 
-    	        <ul>
-                    <li>
-    		            <input type="checkbox" id="check-slider" name="slider">
-                        <label for="check-slider">Слайдер</label>
-                    </li>
-                    <li>
-       		            <input type="checkbox" id="check-advantages" name="advantages">
-                        <label for="check-advantages">Блок преимуществ</label>
-                    </li>
-                    <li>
-        	            <input type="checkbox" id="check-news" name="news">
-                        <label for="check-news">Новости</label>
-                    </li>
-                    <li>
-        	            <input type="checkbox" id="check-gallery" name="gallery">
-                        <label for="check-gallery">Галерея</label>
-                    </li>
-                    <li>
-        	            <input type="checkbox" id="check-basket" name="basket">
-                        <label for="check-basket">Корзина</label>
-                    </li>
-                </ul>
-            </fieldset>
-            <button type="submit" value="btn-option-show">Показать</button>
-    	</form>
-		
-        <div>
-            <p>Сортировать:</p>
+                </fieldset>
+                <button type="submit" class="btn-show">Показать</button>
+    	    </form>
+		</div>
+        <div class="sorting">
+            <p class="sorting-headline">Сортировать:</p>
             <a href="#" aria-label="По цене">По цене</a>
             <a href="#" aria-label="По типу">По типу</a>
             <a href="#" aria-label="По названию">По названию</a>
             <a href="#" aria-label="По убыванию"><img src="img/icon-down-dir.svg" alt="по убыванию"></a>
             <a href="#" aria-label="По возрастанию"><img src="img/icon-up-dir.svg" alt="по возрастанию"></a>
         </div>
-		<section>
+		<section class="templates">
 			<h2 class="visually-hidden">Шаблоны</h2>
             <ul>
-				<li>
+				<li class="templates-item">
                     <a href="#"><img src="img/card-sedona.jpg" width="360" height="576" alt="Шаблон Седона"></a>
+                    <div class="popup">
+                        <a href="#"><h4>Sedona</h4></a>
+                        <p class="text-popup">Информационный сайт для туристов</p>
+                        <a href="basket.html" class="button btn-price" aria-label="Отправить в корзину, цена 9 900 рублей">9 900 <span>&#8381;</span></a>
+                    </div>
                 </li>
-				<li>
+				<li class="templates-item">
                     <a href="#"><img src="img/card-pink.jpg" width="358" height="576" alt="Шаблон Пинк"></a>
+                    <div class="popup">
+                        <a href="#"><h4>Pink App</h4></a>
+                        <p class="text-popup">Продуктовый лендинг приложения для iOS и Android</p>
+                        <a href="basket.html" class="button btn-price" aria-label="Отправить в корзину, цена 9 900 рублей">9 900 <span>&#8381;</span></a>
+                    </div>
                 </li>
-				<li>
+				<li class="templates-item">
                     <a href="#"><img src="img/card-barbershop.jpg" width="364" height="582" alt="Шаблон Барбершоп"></a>
+                    <div class="popup">
+                        <a href="#"><h4>Barbershop</h4></a>
+                        <p class="text-popup">Сайт салона красоты. Для мужчин, да.</p>
+                        <a href="basket.html" class="button btn-price" aria-label="Отправить в корзину, цена 9 900 рублей">9 900 <span>&#8381;</span></a>
+                    </div>
                 </li>
-				<li>
+				<li class="templates-item">
                     <a href="#"><img src="img/card-mishka.jpg" width="362" height="580" alt="Шаблон Мишка"></a>
+                    <div class="popup">
+                        <a href="#"><h4>Mishka</h4></a>
+                        <p class="text-popup">Интернет-магазин вязаных игрушек</p>
+                        <a href="basket.html" class="button btn-price" aria-label="Отправить в корзину, цена 9 900 рублей">9 900 <span>&#8381;</span></a>
+                    </div>
                 </li>
-				<li>
+				<li class="templates-item">
                     <a href="#"><img src="img/card-aplus.jpg" width="364" height="582" alt="Шаблон А плюс"></a>
+                    <div class="popup">
+                        <a href="#"><h4>A Plus</h4></a>
+                        <p class="text-popup">Лендинг курсов повышения квалификации</p>
+                        <a href="basket.html" class="button btn-price" aria-label="Отправить в корзину, цена 9 900 рублей">9 900 <span>&#8381;</span></a>
+                    </div>
                 </li>
-				<li>
+				<li class="templates-item">
                     <a href="#"><img src="img/card-kvast.jpg" width="362" height="580" alt="Шаблон Кваст"></a>
+                    <div class="popup">
+                        <a href="#"><h4>Кваст</h4></a>
+                        <p class="text-popup">Промо-сайт производителя крафтового кваса</p>
+                        <a href="basket.html" class="button btn-price" aria-label="Отправить в корзину, цена 9 900 рублей">9 900 <span>&#8381;</span></a>
+                    </div>
                 </li>
 			</ul>
-            <div>
-                <a href="#1">1</a>
-                <a href="#2">2</a>      
-                <a href="#3">3</a>
-                <a href="#next">Следующая</a>
+            <div class="page-navigation">
+                <a href="#1" class="btn-paginator">1</a>
+                <a href="#2" class="btn-paginator">2</a>      
+                <a href="#3" class="btn-paginator">3</a>
+                <a href="#next" class="btn-paginator">Следующая</a>
             </div>
 		</section>
     </main>
-	<footer>
-		<section>
+	<footer class="main-footer">
+		<section class="main-map">
     		<h2 class="visually-hidden">Карта</h2>
             <img src="img/map.png" width="1440" height="416" alt="Дизайн-студия Нёрдс на карте">
-            <article>
+            <article class="nerds-address">
                 <h4>NЁRDS DESIGN STUDIO</h4>
                     <address>
                     191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
                     тел. +7 (812) 275-75-75
                     </address>
-                    <a href="#">Напишите нам</a>
+                    <a href="#" class="btn-address">Напишите нам</a>
                 </article>
     	</section>
-    	<section>
+    	<section class="social">
     		<h2 class="visually-hidden">Социальные сети</h2>
     		<ul>
     			<li>
@@ -143,48 +177,13 @@
                     <a href="https://www.instagram.com" aria-label="Инстаграм">Инстаграм</a>
                 </li>
     		</ul>
-    		<p>Давайте дружить, это выгодно!</p>
-    		<p>Скидка 10% для друзей из социальных сетей.</p>
+    		<p class="social-appeal">Давайте дружить, это выгодно!</p>
+    		<p class="social-discount">Скидка 10% для друзей из социальных сетей.</p>
     	</section>
 	</footer>
 
-    <div class="pop-up">
-        <a href=""><h4>Sedona</h4></a>
-        <p>Информационный сайт для туристов</p>
-        <a href="basket.html" aria-label="Отправить в корзину, цена 9 900 рублей"><p>9 900 <span>&#8381;</span></p></a>
-    </div>
-
-    <div class="pop-up">
-        <a href=""><h4>Pink App</h4></a>
-        <p>Продуктовый лендинг приложения для iOS и Android</p>
-        <a href="basket.html" aria-label="Отправить в корзину, цена 9 900 рублей"><p>9 900 <span>&#8381;</span></p></a>
-    </div>
-
-    <div class="pop-up">
-        <a href=""><h4>Barbershop</h4></a>
-        <p>Сайт салона красоты. Для мужчин, да.</p>
-        <a href="basket.html" aria-label="Отправить в корзину, цена 9 900 рублей"><p>9 900 <span>&#8381;</span></p></a>
-    </div>
-
-    <div class="pop-up">
-        <a href=""><h4>Mishka</h4></a>
-        <p>Интернет-магазин вязаных игрушек</p>
-        <a href="basket.html" aria-label="Отправить в корзину, цена 9 900 рублей"><p>9 900 <span>&#8381;</span></p></a>
-    </div>
-
-    <div class="pop-up">
-        <a href=""><h4>A Plus</h4></a>
-        <p>Лендинг курсов повышения квалификации</p>
-        <a href="basket.html" aria-label="Отправить в корзину, цена 9 900 рублей"><p>9 900 <span>&#8381;</span></p></a>
-    </div>
-
-    <div class="pop-up">
-        <a href=""><h4>Кваст</h4></a>
-        <p>Промо-сайт производителя крафтового кваса</p>
-        <a href="basket.html" aria-label="Отправить в корзину, цена 9 900 рублей"><p>9 900 <span>&#8381;</span></p></a>
-    </div>
-
-    <section>
+    
+    <section class="modal-letter">
         <h2>Напишите нам</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
             <p>

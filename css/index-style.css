@@ -1,0 +1,411 @@
+:root {
+	--basic-color: #ffffff;
+	--transparent-basic-color: rgba(255, 255, 255, 0.3);
+	--transparent-button-color: rgba(0, 0, 0, 0.0001);
+	--header-color: #eeeeee;
+	--logo-press-color: #a6a6a6;
+	--main-red-color: #fb565a;
+	--hover-red-color: #e74246;
+	--pressing-red-color: #d7373b;
+	--rest-green-color: #00ca74;
+	--hover-green-color: #00bc6c;
+	--pressing-green-color: #00aa62;
+	--rest-yellow-color: #efc84a;
+	--hover-yellow-color: #eab534;
+	--pressing-yellow-color: #e5a722;
+	--rest-social-color: #e1e1e1;
+	--pressing-shadow: rgba(0, 1, 1, 0.1);
+	--hover-grey-color: #dfdfdf;
+	--pressing-grey-color: #d5d5d5;
+	--border-rest-grey-color: #d7dcde;
+	--border-hover-grey-color: #b4b9bb;
+	--grey-active-color: #dbdbdb;
+	--main-black-color: #000000;
+	--hover-black-color: rgba(0, 0, 0, 0.6);
+	--sorting-black-color: rgba(0, 0, 0, 0.3);
+	--rest-black-color: rgba(0, 0, 0, 0.2);
+	--pressing-black-color: rgba(0, 0, 0, 0.1);
+	--small-black-color: #283136;
+	--blocked-black-color: rgba(40, 49, 54, 0.3);
+	--placeholder-color: #444444;
+	--modal-text-color: rgba(68, 68, 68, 0.5);
+	--popup-text-color: #666666;
+
+}
+
+body {
+	min-width: 1180px;
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", "Tahoma", sans-serif;
+	background-color: var(--basic-color);
+	
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.visually-hidden
+/*.popup,
+.modal-letter*/ {
+	display: none;
+}
+
+.main-header {
+	background-color: var(--header-color);
+}
+
+.main-navigation,
+.basket {
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+	
+}
+
+/*.main-logo {
+	color: var(--logo-press-color);
+}*/
+
+.site-navigation a,
+a.basket {
+	color: var(--main-black-color);
+	background-color: var(--header-color);
+}
+
+.site-navigation a:hover,
+a.basket:hover {
+	color: var(--main-red-color);
+}
+
+.site-navigation a:focus,
+a.basket:focus {
+	color: var(--main-black-color);
+	opacity: 0.3;
+}
+
+/*.site-navigation a:active,
+a.basket:active {
+	color: var(--main-black-color);
+	border-bottom: 2px solid var(--main-red-color);
+}*/
+
+.index-slider .item-1 {
+	background-image: url(../img/nerds-index-slide1.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	
+}
+
+.index-slider .item-2 {
+	background-image: url(../img/nerds-index-slide2.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	
+}
+
+.index-slider .item-3 {
+	background-image: url(../img/nerds-index-slide3.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	
+}
+
+.slider-list .headline {
+	font-size: 55px;
+	line-height: 55px;
+	font-weight: 500;
+	color: var(--main-black-color);
+}
+
+.text-slider {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: var(--small-black-color);
+}
+
+a.btn-slider {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: var(--basic-color);
+	background-color: var(--main-red-color);
+}
+
+a.btn-slider:hover {
+	color: var(--basic-color);
+	background-color: var(--hover-red-color);
+}
+
+a.btn-slider:focus {
+	color: var(--transparent-basic-color);
+	background-color: var(--pressing-red-color);
+}
+
+.services-item h3 {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--main-black-color);
+}
+
+.text-services {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: var(--small-black-color);
+}
+
+a.btn-services-sites {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: var(--basic-color);
+	background-color: var(--main-red-color);
+}
+
+a.btn-services-sites:hover {
+	color: var(--basic-color);
+	background-color: var(--hover-red-color);
+}
+
+a.btn-services-sites:focus {
+	color: var(--transparent-basic-color);
+	background-color: var(--pressing-red-color);
+}
+
+a.btn-services-adds {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: var(--basic-color);
+	background-color: var(--rest-green-color);
+}
+
+a.btn-services-adds:hover {
+	color: var(--basic-color);
+	background-color: var(--hover-green-color);
+}
+
+a.btn-services-adds:focus {
+	color: var(--transparent-basic-color);
+	background-color: var(--pressing-green-color);
+}
+
+a.btn-services-presentations {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: var(--basic-color);
+	background-color: var(--rest-yellow-color);
+}
+
+a.btn-services-presentations:hover {
+	color: var(--basic-color);
+	background-color: var(--hover-yellow-color);
+}
+
+a.btn-services-presentations:focus {
+	color: var(--transparent-basic-color);
+	background-color: var(--pressing-yellow-color);
+}
+
+.slogan {
+	font-size: 45px;
+	line-height: 45px;
+	font-weight: 500;
+	color: var(--main-black-color);
+}
+
+.text-advantages {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: var(--small-black-color);
+}
+
+.report-advantages .headline {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--small-black-color);
+}
+
+.show-advantages .headline {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--main-black-color);
+}
+
+.show-advantages tr th {
+	font-size: 45px;
+	line-height: 64px;
+	font-weight: 700;
+	color: var(--main-black-color);
+}
+
+.show-advantages tr sup {
+	font-size: 26px;
+	line-height: 40px;
+	font-weight: 700;
+	color: var(--main-black-color);
+}
+
+.show-advantages tr td {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	color: var(--small-black-color);
+}
+
+.partners a {
+	opacity: 0.2;
+}
+
+.partners a:hover {
+	opacity: 1;
+}
+
+.partners a:focus {
+	opacity: 0.1;
+}
+
+.nerds-address h4 {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--main-black-color);
+}
+
+address {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	font-style: normal;
+	color: var(--popup-text-color);
+}
+
+a.btn-address {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: var(--basic-color);
+	background-color: var(--main-red-color);
+}
+
+a.btn-address:hover {
+	color: var(--basic-color);
+	background-color: var(--hover-red-color);
+}
+
+a.btn-address:focus {
+	color: var(--transparent-basic-color);
+	background-color: var(--pressing-red-color);
+}
+
+.social-appeal {
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: 700;
+	color: var(--main-black-color);
+}
+
+.social-discount {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 400;
+	color: var(--placeholder-color);
+}
+
+.modal-letter h2 {
+	font-size: 45px;
+	line-height: 53px;
+	font-weight: 700;
+	color: var(--main-black-color);
+}
+
+.modal-letter label {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 700;
+	color: var(--main-black-color);
+}
+
+.modal-letter input[type="text"],
+.modal-letter input[type="email"],
+.modal-letter textarea {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	color: var(--modal-text-color);
+	background-color: transparent;
+	border: 2px solid var(--border-rest-grey-color);
+}
+
+.modal-letter input[type="text"]:hover,
+.modal-letter input[type="email"]:hover,
+.modal-letter textarea:hover {
+	color: var(--modal-text-color);
+	background-color: transparent;
+	border: 2px solid var(--border-hover-grey-color);
+}
+
+.modal-letter input[type="text"]:focus,
+.modal-letter input[type="email"]:focus,
+.modal-letter textarea:focus {
+	color: var(--placeholder-color);
+	background-color: transparent;
+	border: 2px solid var(--main-black-color);
+}
+
+/*.modal-letter input[type="text"]:invalid,
+.modal-letter input[type="email"]:invalid,
+.modal-letter textarea:invalid {
+	color: var(--hover-red-color);
+	background-color: transparent;
+	border: 2px solid var(--hover-red-color);
+}*/
+
+.modal-letter button {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: var(--basic-color);
+	background-color: var(--main-red-color);
+	
+}
+
+.modal-letter button:hover {
+	color: var(--basic-color);
+	background-color: var(--hover-red-color);
+	
+}
+
+.modal-letter button:focus {
+	color: var(--transparent-basic-color);
+	background-color: var(--pressing-red-color);
+	
+}
