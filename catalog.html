@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -7,23 +7,27 @@
     <link rel="stylesheet" href="css/catalog-style.css">
     <title>HTML Academy: Нёрдс</title>
   </head>
-  <body>
+  <body class="catalog-body">
 	<header class="main-header">
-		<a href="index.html">
-			<img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип">
-		</a>
-		<nav class="main-navigation" aria-label="навигация по сайту">
-			<ul class="site-navigation">
-				<li><a href="studio.html">Студия</a></li>
-				<li><a href="customers.html">Клиенты</a></li>
-				<li><a>Магазин</a></li>
-				<li><a href="contacts.html">Контакты</a></li>
-			</ul>
-		</nav>
-		<a href="basket.html" class="basket">Корзина</a>
-		<p class="catalog-headline">Магазин готовых шаблонов</p>
+        <div class="header-navigation container">
+		    <a href="index.html" class="main-logo">
+			    <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип">
+		    </a>
+		    <nav class="main-navigation" aria-label="навигация по сайту">
+			    <ul class="site-navigation">
+				    <li><a href="studio.html">Студия</a></li>
+				    <li><a href="customers.html">Клиенты</a></li>
+				    <li><a>Магазин</a></li>
+				    <li><a href="contacts.html">Контакты</a></li>
+			    </ul>
+		    </nav>
+            <div class="nerds-basket">
+		      <a href="basket.html" class="basket">Корзина</a>
+            </div>
+		</div>
+        <p class="catalog-headline">Магазин готовых шаблонов</p>
 	</header>
-    <main>
+    <main class="page-catalog container">
         <div class="filter">
     	    <form action="https://echo.htmlacademy.ru" method="get">
                 <fieldset>
@@ -83,17 +87,19 @@
                 <button type="submit" class="btn-show">Показать</button>
     	    </form>
 		</div>
-        <div class="sorting">
-            <p class="sorting-headline">Сортировать:</p>
-            <a href="#" aria-label="По цене">По цене</a>
-            <a href="#" aria-label="По типу">По типу</a>
-            <a href="#" aria-label="По названию">По названию</a>
-            <a href="#" aria-label="По убыванию"><img src="img/icon-down-dir.svg" alt="по убыванию"></a>
-            <a href="#" aria-label="По возрастанию"><img src="img/icon-up-dir.svg" alt="по возрастанию"></a>
-        </div>
-		<section class="templates">
+        <section class="templates">
 			<h2 class="visually-hidden">Шаблоны</h2>
-            <ul>
+            <div class="sorting">
+                <p class="sorting-headline">Сортировать:</p>
+                <div class="sorting-btn">
+                    <a href="#" aria-label="По цене">По цене</a>
+                    <a href="#" aria-label="По типу">По типу</a>
+                    <a href="#" aria-label="По названию">По названию</a>
+                    <a href="#" aria-label="По убыванию"><img src="img/icon-down-dir.svg" alt="по убыванию"></a>
+                    <a href="#" aria-label="По возрастанию"><img src="img/icon-up-dir.svg" alt="по возрастанию"></a>
+                </div>
+            </div>
+            <ul class="templates-list">
 				<li class="templates-item">
                     <a href="#"><img src="img/card-sedona.jpg" width="360" height="576" alt="Шаблон Седона"></a>
                     <div class="popup">
@@ -144,10 +150,11 @@
                 </li>
 			</ul>
             <div class="page-navigation">
-                <a href="#1" class="btn-paginator">1</a>
-                <a href="#2" class="btn-paginator">2</a>      
-                <a href="#3" class="btn-paginator">3</a>
-                <a href="#next" class="btn-paginator">Следующая</a>
+                <a href="#prev" class="btn-paginator prev btn-hidden">Предыдущая</a>
+                <a href="#1" class="btn-paginator one">1</a>
+                <a href="#2" class="btn-paginator two">2</a>      
+                <a href="#3" class="btn-paginator three">3</a>
+                <a href="#next" class="btn-paginator next">Следующая</a>
             </div>
 		</section>
     </main>
@@ -164,9 +171,9 @@
                     <a href="#" class="btn-address">Напишите нам</a>
                 </article>
     	</section>
-    	<section class="social">
+    	<section class="social container">
     		<h2 class="visually-hidden">Социальные сети</h2>
-    		<ul>
+    		<ul class="social-links">
     			<li>
                     <a href="https://vkontakte.com" aria-label="Вконтакте">Вконтакте</a>
                 </li>
@@ -177,8 +184,10 @@
                     <a href="https://www.instagram.com" aria-label="Инстаграм">Инстаграм</a>
                 </li>
     		</ul>
-    		<p class="social-appeal">Давайте дружить, это выгодно!</p>
-    		<p class="social-discount">Скидка 10% для друзей из социальных сетей.</p>
+            <div class="social-text">
+    		  <p class="social-appeal">Давайте дружить, это выгодно!</p>
+    		  <p class="social-discount">Скидка 10% для друзей из социальных сетей.</p>
+            </div>
     	</section>
 	</footer>
 
