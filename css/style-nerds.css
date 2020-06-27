@@ -328,6 +328,10 @@ a.btn-slider:focus {
     
 }
 
+.slider-controls button:focus {
+	outline: none;
+}
+
 .slider-controls button.current {
 	padding: 0;
 	width: 17px;
@@ -959,6 +963,7 @@ button.btn-show {
 	margin-top: 2px;
 	border-radius: 3px;
 	border: none;
+	cursor: pointer;
 }
 
 button.btn-show:hover {
@@ -971,6 +976,7 @@ button.btn-show:focus {
 	color: var(--sorting-black-color);
 	background-color: var(--pressing-grey-color);
 	box-shadow: inset 0 3px 0 var(--shadow-color);
+	outline: none;
 }
 
 .main-catalog {
@@ -1622,6 +1628,7 @@ button.closing-button:hover {
 
 button.closing-button:focus {
 	opacity: 0.1;
+	outline: none;
 }
 
 @keyframes backInUp {
